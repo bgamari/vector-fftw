@@ -33,7 +33,8 @@ module Numeric.FFT.Vector.Base(
 import qualified Data.Vector.Storable as VS
 import qualified Data.Vector.Storable.Mutable as MS
 import Data.Vector.Generic as V hiding (forM_)
-import Data.Vector.Generic.Mutable as M hiding (unsafeModify)
+import Data.Vector.Generic.Mutable (MVector)
+import qualified Data.Vector.Generic.Mutable as M
 import Data.List as L
 import Control.Concurrent.MVar
 import Control.Monad.Primitive (RealWorld,PrimMonad(..), PrimBase,
@@ -116,7 +117,7 @@ execute Plan{..} = \v -> -- fudge the arity to make sure it's always inlined
                         forM_ [0..n-1] $ \k -> M.unsafeWrite planInput k
                                                 $ V.unsafeIndex v k
                         planExecute
-                        v' <- unsafeNew m
+                        v' <- M.unsafeNew m
                         forM_ [0..m-1] $ \k -> M.unsafeRead planOutput k
                                                 >>= M.unsafeWrite v' k
                         V.unsafeFreeze v'
