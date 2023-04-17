@@ -48,9 +48,9 @@ Library
   Other-modules:
         Numeric.FFT.Vector.Base
 
-  Build-depends: base>=4.3 && < 4.15,
-                 vector>=0.9 && < 0.13,
-                 primitive>=0.6 && < 0.8,
+  Build-depends: base>=4.3 && < 4.19,
+                 vector>=0.9 && < 0.14,
+                 primitive>=0.6 && < 0.9,
                  storable-complex==0.2.*
   if os(windows)
     Extra-libraries: fftw3-3
