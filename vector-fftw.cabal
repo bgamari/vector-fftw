@@ -48,7 +48,7 @@ Library
   Other-modules:
         Numeric.FFT.Vector.Base
 
-  Build-depends: base>=4.3 && < 4.20,
+  Build-depends: base>=4.3 && < 4.21,
                  vector>=0.9 && < 0.14,
                  primitive>=0.6 && < 0.10,
                  storable-complex==0.2.*
