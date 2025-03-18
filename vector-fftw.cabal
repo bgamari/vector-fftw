@@ -2,7 +2,7 @@ cabal-version:       >=1.10
 
 Name:                vector-fftw
 
-Version:             0.1.4.0
+Version:             0.1.4.1
 License:             BSD3
 License-file:        LICENSE
 Author:              Judah Jacobson

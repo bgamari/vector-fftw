@@ -1,5 +1,9 @@
 # vector-fftw changelog
 
+## 0.1.4.1
+
+* Adjust imports to support newer GHCs.
+
 ## 0.1.4.0
 
 * Introduce multi-dimensional transforms:
